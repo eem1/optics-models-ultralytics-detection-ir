@@ -148,10 +148,15 @@ To register or update container definitions in Google Cloud Composer / Airflow:
 
 4. Click Trigger and monitor execution logs until completion. 
 
-5. Monitor the DAG Progress 
+5. Monitor DAG Progress 
 
     Select `Managed Airflow` >  `composer-env1` > `DAGs`
     Click `nmfs-optics-pipeline-longrunning-dag` to see the list DAG runs.
-6. Check Job Status
 
-    Open `Google Cloud Console`, search bar `Batch`. When the job is actually scheduled to run, your job will appear on the Job list, select the job, click `Logs` tab for log details
+6. Check GCP Batch Job Status
+
+    Open Google Cloud Console and search for Batch in the top search bar.
+
+    When the job is scheduled, it will appear in the Job List.
+    
+    Select your job and click the Logs tab to view live execution details.
