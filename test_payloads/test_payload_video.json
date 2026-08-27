@@ -1,0 +1,15 @@
+{
+  "instances": [
+    {
+      "input_files": [
+        "gs://ggn-nmfs-osi-dev-1-data/<TODO_YOUR_FOLDER>/test-images/bigfish.mp4"
+      ],
+      "output_file": "gs://ggn-nmfs-osi-dev-1-data/<TODO_YOUR_FOLDER>/test-outputs/bigfish_output.json",
+      "config": {
+        "options": {
+          "conf": 0.45
+        }
+      }
+    }
+  ]
+}

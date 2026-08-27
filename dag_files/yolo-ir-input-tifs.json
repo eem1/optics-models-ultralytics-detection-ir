@@ -1,0 +1,11 @@
+{
+    "instances":[
+        {
+            "input_files":[                                                          
+                "ggn-nmfs-osi-dev-1-data/erin/images_sample/images_seals_ir/ice_seals_2024_fl05_C_20240607_231032.590660_ir.tif",
+                "ggn-nmfs-osi-dev-1-data/erin/images_sample/images_seals_ir/ice_seals_2024_fl05_C_20240607_231152.607883_ir.tif",
+                "ggn-nmfs-osi-dev-1-data/erin/images_sample/images_seals_ir/ice_seals_2024_fl05_C_20240607_231354.628760_ir.tif"
+            ]
+        }
+    ]
+}   

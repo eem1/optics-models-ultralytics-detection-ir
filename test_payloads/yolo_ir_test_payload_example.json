@@ -1,0 +1,22 @@
+{
+    "instances":[
+        {
+            "input_files":[                                                          
+                "ggn-nmfs-osi-dev-1-data/erin/images_sample/images_seals_ir/ice_seals_2024_fl05_C_20240607_231032.590660_ir.tif",
+                "ggn-nmfs-osi-dev-1-data/erin/images_sample/images_seals_ir/ice_seals_2024_fl05_C_20240607_231152.607883_ir.tif",
+                "ggn-nmfs-osi-dev-1-data/erin/images_sample/images_seals_ir/ice_seals_2024_fl05_C_20240607_231354.628760_ir.tif"
+            ],
+            "output_file": "gs://ggn-nmfs-osi-dev-1-data/erin/output-ir/results_spicy_ir.csv",
+            "config": {
+                "weights": "gs://ggn-nmfs-osi-dev-1-data/erin/ultralytics_weights/yolo11s_IR_2025_best.pt",
+                "diff_threshold": 500,
+                "lower_percentitle": 0.001, 
+                "upper_percentitle": 99.999,
+
+                "options": {
+                    "conf": 0.01
+                }
+            }
+        }
+    ]
+}   

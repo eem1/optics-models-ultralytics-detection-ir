@@ -1,0 +1,18 @@
+
+model_family: ultralytics
+
+# AFSC spicy ir-despeckle-normalize-model
+weights: "gs://ggn-nmfs-osi-dev-1-data/erin/ultralytics_weights/yolo11s_IR_2025_best.pt"
+
+output_type: csv # currently only support csv
+upload_dataset_to_output_folder: no # option yes/no. Default is 'no'
+
+# Payload for YOLO options
+payload:
+  conf: 0.01
+ 
+# Model normalization params
+params:
+  diff_threshold: 500
+  lower_percentitle: 0.001
+  upper_percentitle: 99.999

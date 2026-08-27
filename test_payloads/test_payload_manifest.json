@@ -1,0 +1,13 @@
+{
+  "instances": [
+    {
+      "output_file": "gs://ggn-nmfs-osi-dev-1-data/<TODO_YOUR_FOLDER>/test-outputs/manifest_run_output.json",
+      "config": {
+        "input_manifest": "gs://ggn-nmfs-osi-dev-1-data/<TODO_YOUR_FOLDER>/test-images/input_manifest.json",
+        "options": {
+          "conf": 0.3
+        }
+      }
+    }
+  ]
+}
