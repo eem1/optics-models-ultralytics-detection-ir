@@ -134,16 +134,22 @@ To register or update container definitions in Google Cloud Composer / Airflow:
 
 **3. Trigger Pipeline via Airflow UI**
 
-1. Upload your target YAML configuration file (e.g., dag_files/nmfs-optics-yolo-ir-despeckle-normalize-config.yaml) to GCS.
+1. Upload your target YAML configuration file (e.g., test_airflow_dag/nmfs-optics-yolo-ir-despeckle-normalize-config.yaml) to GCS.
 
 2. Open Google Cloud Console, project ID `ggn-nmfs-osi-dev-1`, search Bar `Managed Airflow`> select `composer-env1`> `Open Airflow UI` > select `nmfs-optics-pipeline-longrunning-dag`> Trigger DAG arrow
 
 3. Fill out the trigger form:
 
-Model Type: `optics-yolo-ir-despeckle-normalize-model`
+  - Model Type: `optics-yolo-ir-despeckle-normalize-model`
 
-YAML Config File: `gs://bucket/your_folder/configs/nmfs-optics-yolo-ir-despeckle-normalize-config.yaml`
+  - YAML Config File: `gs://bucket/your_folder/configs/nmfs-optics-yolo-ir-despeckle-normalize-config.yaml`
 
-Output Folder: `your_folder/your-output-folder/`
+  - Output Folder: `your_folder/your-output-folder/`
 
 4. Click Trigger and monitor execution logs until completion. 
+
+5. Monitor the DAG Progress 
+  - Select `Managed Airflow` >  `composer-env1` > `DAGs`
+  - Click `nmfs-optics-pipeline-longrunning-dag` to see the list DAG runs.
+6. Check Job Status
+  - Open `Google Cloud Console`, search bar `Batch`. When the job is actually scheduled to run, your job will appear on the Job list, select the job, click `Logs` tab for log details
