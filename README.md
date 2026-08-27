@@ -140,16 +140,18 @@ To register or update container definitions in Google Cloud Composer / Airflow:
 
 3. Fill out the trigger form:
 
-  - Model Type: `optics-yolo-ir-despeckle-normalize-model`
+   Model Type: `optics-yolo-ir-despeckle-normalize-model`
 
-  - YAML Config File: `gs://bucket/your_folder/configs/nmfs-optics-yolo-ir-despeckle-normalize-config.yaml`
+   YAML Config File: `gs://bucket/your_folder/configs/nmfs-optics-yolo-ir-despeckle-normalize-config.yaml`
 
-  - Output Folder: `your_folder/your-output-folder/`
+   Output Folder: `your_folder/your-output-folder/`
 
 4. Click Trigger and monitor execution logs until completion. 
 
 5. Monitor the DAG Progress 
-  - Select `Managed Airflow` >  `composer-env1` > `DAGs`
-  - Click `nmfs-optics-pipeline-longrunning-dag` to see the list DAG runs.
+
+    Select `Managed Airflow` >  `composer-env1` > `DAGs`
+    Click `nmfs-optics-pipeline-longrunning-dag` to see the list DAG runs.
 6. Check Job Status
-  - Open `Google Cloud Console`, search bar `Batch`. When the job is actually scheduled to run, your job will appear on the Job list, select the job, click `Logs` tab for log details
+
+    Open `Google Cloud Console`, search bar `Batch`. When the job is actually scheduled to run, your job will appear on the Job list, select the job, click `Logs` tab for log details
