@@ -79,7 +79,17 @@ curl -X POST http://localhost:8080/predict -H "Content-Type: application/json" -
 
 #### ⚙️ Configuration & Features
 
-See `test_payloads/yolo_ir_test_payload_example.json` for details on passing model normalization parameters.
+#### Passing Model Normalization Parameters
+```json
+"config": {
+    "diff_threshold": 500,
+    "lower_percentitle": 0.001, 
+    "upper_percentitle": 99.999,
+    "options": {}
+    }
+```
+
+See `test_payloads/yolo_ir_test_payload_example.sjon` for an example.
 
 #### YOLO Inference Options (Kwargs Passthrough)
 Any key-value pairs you place inside the `"options"` object of your config will be passed directly to the `YOLO.predict()` method as `**kwargs`. This means you can control confidence, IOU, image size, and more, directly from the Airflow UI without changing code.
@@ -135,6 +145,8 @@ To register or update container definitions in Google Cloud Composer / Airflow:
 **3. Trigger Pipeline via Airflow UI**
 
 1. Upload your target YAML configuration file (e.g., test_airflow_dag/nmfs-optics-yolo-ir-despeckle-normalize-config.yaml) to GCS.
+
+    See yaml file for details on passing model normalization params to the model.
 
 2. Upload your target dataset test json file (e.g., test_airflow_dag/yolo-ir-input-tifs) to GCS.
 
